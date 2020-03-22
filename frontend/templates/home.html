@@ -1,0 +1,26 @@
+
+<div class="container" ng-controller="homeController">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <h1>Create bid</h1>
+            <form name="myForm">
+                <div class="form-group">
+                  <label>Item Name</label>
+                  <input type="text" class="form-control" ng-model="itemDtls.item_nm" placeholder="Enter name" required />
+                </div>
+                <div class="form-group">
+                  <label>Item Cost</label>
+                  <input type="number" class="form-control"  ng-model="itemDtls.item_cost" placeholder="Enter cost" required />
+                </div>
+                <button type="submit" class="btn btn-primary" ng-disabled="myForm.$invalid" ng-click="createBid();">Submit</button>
+            </form>
+      </div>
+    </div>
+</div>
+
+<style>
+    h1 {
+        text-align: center;
+        color: rgba(0,0,0,.5);
+    }
+</style>
